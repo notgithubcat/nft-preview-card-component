@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+
+  /* ## Custom Properties
+
+### Primary */
+
+--clr-pr-softblue: hsla(215, 51%, 70%, .5);
+--clr-pr-cyan: hsl(178, 100%, 50%);
+--clr-pr-cyan-50: hsl(178, 100%, 50%, .5);
+
+/* ### Neutral */
+
+--clr-nt-drkblue-900: hsl(217, 54%, 11%);
+--clr-nt-drkblue-800: hsl(216, 50%, 16%);
+--clr-nt-drkblue-600: hsl(215, 32%, 27%);
+--clr-nt-white: hsl(0, 0%, 100%);
+
+
+/* ## Typography */
+/* font family */
+--ff-outfit: 'Outfit', sans-serif;
+
+/* font weight */
+
+--fw-600: font-weight: 600;
+--fw-400: font-weight: 400;
+--fw-300: font-weight: 300;
+
+
+}
+
+
+/* CSS RESET
+
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+body{
+  background-color: var(--clr-nt-drkblue-900);
+  font-family: var(--ff-outfit);
+  font-size: 1rem;
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  margin: 1rem;
+}
+
+/* card styles */
+
+.card{
+
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+  background-color: var(--clr-nt-drkblue-800);
+
+  display: grid;
+  max-width: 600px;
+  padding: var(--content-padding);
+  border-radius: 1rem;
+  color: var(--clr-pr-softblue);
+
+  max-width: 300px;
+}
+
+.card__img{
+  position: relative;
+}
+
+.card__img img{
+  border-radius: .5rem;
+}
+
+
+
+.overlay {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: var(--clr-pr-cyan-50);
+  border-radius: .5rem;
+}
+
+.card__img:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+.card__content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card__content hr{
+  border: 0;
+  border-top: 1px solid var(--clr-nt-drkblue-600);
+}
+
+.card__title{
+  color: var(--clr-nt-white);
+}
+
+.card__title:hover{
+  color: var(--clr-pr-cyan);
+  cursor: pointer;
+}
+
+
+.card__etherium-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__etherium-details > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.card__etherium{
+  font-weight: bold;
+  color: var(--clr-pr-cyan);
+}
+
+
+.card__creator{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__creator span{
+  color: var(--clr-nt-white);
+}
+
+.card__creator span:hover{
+  color: var(--clr-pr-cyan);
+  cursor: pointer;
+}
+
+.card__creator img{
+  border: 2px solid var(--clr-nt-white);
+  border-radius: 50%;
+  width: 32px;
+
+}
+
+
+
+

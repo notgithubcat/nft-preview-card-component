@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <picture class="card__img"
+          ><img
+            src="./images/image-equilibrium.jpg"
+            alt="a glass cube in a center"
+          />
+          <div class="overlay">
+            <img src="./images/icon-view.svg" alt="eye-icon" />
+          </div>
+        </picture>
+        <div class="card__content">
+          <h1 class="card__title">Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+
+          <div class="card__etherium-details">
+            <div>
+              <img src="./images/icon-ethereum.svg" alt="" />
+              <p class="card__etherium">0.041 ETH</p>
+            </div>
+            <div>
+              <img src="./images/icon-clock.svg" alt="" />
+              <p class="card__timeleft">3 days left</p>
+            </div>
+          </div>
+          <hr />
+          <div class="card__creator">
+            <img
+              src="./images/image-avatar.png"
+              alt="picture of a guy in white shirt"
+            />
+            <p>Creation of <span>Jules Wyvern</span></p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
